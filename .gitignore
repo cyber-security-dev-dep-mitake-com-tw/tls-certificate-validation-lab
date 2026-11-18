@@ -6,3 +6,7 @@ __pycache__/
 *.pem
 state/
 /.cursor
+rust/target/
+julia/Manifest.toml
+zig/possession/.zig-cache/
+zig/possession/zig-out/

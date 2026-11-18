@@ -1,0 +1,18 @@
+[package]
+name = "svc1"
+version = "0.1.0"
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+certs = { path = "../certs" }
+ctrlc = "3"
+openssl.workspace = true
+policy = { path = "../policy" }
+
+[dev-dependencies]
+harness = { path = "../harness" }
+oracle-client = { path = "../oracle-client" }
+serde_json.workspace = true
+tempfile = "3"

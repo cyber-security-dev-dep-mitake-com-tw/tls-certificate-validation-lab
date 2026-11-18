@@ -1,0 +1,10 @@
+[package]
+name = "oracle-client"
+version = "0.1.0"
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+jsonline = { path = "../jsonline" }
+serde_json.workspace = true

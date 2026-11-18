@@ -2,36 +2,42 @@ name: tls-certificate-validation-lab
 services:
   svc1:
     build: .
-    command: ["python", "-u", "svc1.py"]
+    command: ["/usr/local/bin/svc1"]
     environment:
       LAB_DOMAIN: ${LAB_DOMAIN:-tls-lab.example.test}
       LAB_STATE: /state
       LAB_TRUST: /trust
       LAB_BIND: 0.0.0.0
+      LAB_ADVERTISED_HOST: svc1
+      JULIA_GENERATE: /opt/lab/julia/generate.jl
+      POSSESSION_BIN: /usr/local/bin/possession
     volumes:
       - lab_trust:/trust
     networks:
       - lab_internal
     healthcheck:
-      test: ["CMD", "python", "-c", "import socket; s=socket.create_connection(('127.0.0.1',15112), timeout=2); s.close()"]
+      test: ["CMD", "test", "-f", "/state/ready"]
       interval: 5s
       timeout: 3s
-      retries: 12
-      start_period: 15s
+      retries: 24
+      start_period: 120s
     restart: "no"
     security_opt:
       - no-new-privileges:true
   svc2:
     build: .
-    # Match host user ID when writing bind-mounted report files.
     user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
-    command: ["python", "-u", "run_matrix.py"]
+    command: ["/usr/local/bin/harness"]
     environment:
       LAB_DOMAIN: ${LAB_DOMAIN:-tls-lab.example.test}
       LAB_HOST: svc1
       LAB_TRUST_FILE: /trust/trusted_root_ca.pem
-      APPROVED_SPKI_FILE: /trust/approved_spki_sha256.txt
+      LAB_POLICY_DIR: /trust
+      LAB_POSSESSION_LEAF: /trust/possession_leaf.pem
       REPORT_DIR: /reports
+      JULIA_ANALYZE: /opt/lab/julia/analyze.jl
+      JULIA_ORACLE: /opt/lab/julia/oracle.jl
+      LAB_LLM_PROVIDER: ${LAB_LLM_PROVIDER:-disabled}
     volumes:
       - lab_trust:/trust:ro
       - ./reports:/reports

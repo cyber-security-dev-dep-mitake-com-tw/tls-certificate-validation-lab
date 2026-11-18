@@ -1,0 +1,15 @@
+[package]
+name = "certs"
+version = "0.1.0"
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+jsonline = { path = "../jsonline" }
+ecdsa = { version = "0.16", features = ["arithmetic"] }
+openssl.workspace = true
+p256.workspace = true
+policy = { path = "../policy" }
+serde_json.workspace = true
+sha2.workspace = true

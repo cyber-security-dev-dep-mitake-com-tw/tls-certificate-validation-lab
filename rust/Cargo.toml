@@ -1,0 +1,26 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/policy",
+    "crates/jsonline",
+    "crates/rea",
+    "crates/oracle-client",
+    "crates/certs",
+    "crates/svc2",
+    "crates/svc1",
+    "crates/harvester",
+    "crates/harness",
+]
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+publish = false
+
+[workspace.dependencies]
+anyhow = "1"
+openssl = { version = "0.10", features = ["vendored"] }
+p256 = { version = "0.13", features = ["ecdsa", "arithmetic"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"

@@ -1,0 +1,7 @@
+.git
+rust/target
+zig/possession/zig-out
+zig/possession/.zig-cache
+reports
+state
+*.pem
