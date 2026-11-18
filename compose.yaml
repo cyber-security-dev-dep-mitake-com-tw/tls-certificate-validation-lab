@@ -1,0 +1,50 @@
+name: tls-certificate-validation-lab
+services:
+  svc1:
+    build: .
+    command: ["python", "-u", "svc1.py"]
+    environment:
+      LAB_DOMAIN: ${LAB_DOMAIN:-tls-lab.example.test}
+      LAB_STATE: /state
+      LAB_TRUST: /trust
+      LAB_BIND: 0.0.0.0
+    volumes:
+      - lab_trust:/trust
+    networks:
+      - lab_internal
+    healthcheck:
+      test: ["CMD", "python", "-c", "import socket; s=socket.create_connection(('127.0.0.1',15112), timeout=2); s.close()"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 15s
+    restart: "no"
+    security_opt:
+      - no-new-privileges:true
+  svc2:
+    build: .
+    # Match host user ID when writing bind-mounted report files.
+    user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
+    command: ["python", "-u", "run_matrix.py"]
+    environment:
+      LAB_DOMAIN: ${LAB_DOMAIN:-tls-lab.example.test}
+      LAB_HOST: svc1
+      LAB_TRUST_FILE: /trust/trusted_root_ca.pem
+      APPROVED_SPKI_FILE: /trust/approved_spki_sha256.txt
+      REPORT_DIR: /reports
+    volumes:
+      - lab_trust:/trust:ro
+      - ./reports:/reports
+    networks:
+      - lab_internal
+    depends_on:
+      svc1:
+        condition: service_healthy
+    security_opt:
+      - no-new-privileges:true
+    restart: "no"
+networks:
+  lab_internal:
+    internal: true
+volumes:
+  lab_trust: {}

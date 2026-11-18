@@ -1,0 +1,736 @@
+{
+  "created_at_utc": "2026-11-18T01:47:53.959840+00:00",
+  "test_count": 24,
+  "binary_correct": 24,
+  "reason_correct": 24,
+  "protocol_correct": 24,
+  "transport_correct": 24,
+  "confusion_matrix": {
+    "TP": 21,
+    "TN": 3,
+    "FP": 0,
+    "FN": 0
+  },
+  "cases": [
+    {
+      "host": "127.0.0.1",
+      "port": 15111,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.1",
+      "negotiated_tls": "TLSv1.1",
+      "certificate_status": "VALID",
+      "certificate_authenticated": true,
+      "spki_authorized": true,
+      "protocol_policy": "DEPRECATED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "40d6a441eb3a09e6e68599e6ba03536ca29760de3c78937866e5302a029fd6a9",
+        "spki_sha256": "d2c05db9ff4c554f8060a5ecd69af76bf7981f185d6c20c4cc3a0d4b6581ffac"
+      },
+      "verify_excerpt": " 257 bytes\nVerification: OK\nVerified peername: tls-lab.example.test\n---\nNew, TLSv1.0, Cipher is ECDHE-RSA-AES256-SHA\nProtocol: TLSv1.1\nServer public key is 2048 bit\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.1\n    Cipher    : ECDHE-RSA-AES256-SHA\n    Session-ID: 509562B881AD4DF86DDDC0A8898CA83DC7AEE52AED660CC5E1DDFB7382B8EA0A\n    Session-ID-ctx: \n    Master-Key: 2CCD3FCC368F7EC984E6EA775958EFBB2586216D563AF38BB0EFAD7A5F93FE4E39E8FE7F38484F75B03DB01B8DB85F22\n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    TLS session ticket lifetime hint: 7200 (seconds)\n    TLS session ticket:\n    0000 - 23 67 b8 f9 96 26 71 78-59 74 a4 53 1c bf 12 54   #g...&qxYt.S...T\n    0010 - 9a ba 2e 6a 9b d3 0f 6c-78 f1 0e a1 83 c1 59 23   ...j...lx.....Y#\n    0020 - 7a 54 cd e1 6a 3e e0 d0-3d 77 54 f4 59 11 82 fd   zT..j>..=wT.Y...\n    0030 - 52 84 c6 16 56 5b c8 9d-45 11 60 6e 09 fc d4 26   R...V[..E.`n...&\n    0040 - 78 41 f6 aa 08 c3 f9 c4-5b d0 1d 86 17 9f 34 a9   xA......[.....4.\n    0050 - c8 5b 4d fc 4b ed e9 12-68 42 63 87 b3 aa 57 70   .[M.K...hBc...Wp\n    0060 - 75 20 f3 a4 4c 6f 53 7b-f4 7a 87 e4 13 76 a0 28   u ..LoS{.z...v.(\n    0070 - 3a ba 78 20 7a 10 b9 4c-d0 3b 1a a2 05 6c f5 68   :.x z..L.;...l.h\n    0080 - f3 b7 84 9c 77 8b 0c ab-55 fe c2 79 26 00 f8 73   ....w...U..y&..s\n    0090 - 4f 9b c4 92 7a 72 6d a6-77 8a fd 8b b3 08 58 19   O...zrm.w.....X.\n    00a0 - 2d 2f 81 43 1b c9 63 85-ca 4a 02 7f a3 fa e1 4f   -/.C..c..J.....O\n\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=1 CN=TLS-LAB Trusted Root CA\nverify return:1\ndepth=0 CN=tls-lab.example.test\nverify return:1\nDONE",
+      "scenario": "good",
+      "expected_certificate_status": "VALID",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15112,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.2",
+      "negotiated_tls": "TLSv1.2",
+      "certificate_status": "VALID",
+      "certificate_authenticated": true,
+      "spki_authorized": true,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": true,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "40d6a441eb3a09e6e68599e6ba03536ca29760de3c78937866e5302a029fd6a9",
+        "spki_sha256": "d2c05db9ff4c554f8060a5ecd69af76bf7981f185d6c20c4cc3a0d4b6581ffac"
+      },
+      "verify_excerpt": "ification: OK\nVerified peername: tls-lab.example.test\n---\nNew, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384\nProtocol: TLSv1.2\nServer public key is 2048 bit\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.2\n    Cipher    : ECDHE-RSA-AES256-GCM-SHA384\n    Session-ID: CE75E76E17B6D730A96FBA3B6547EBB050D95C6879EE3659B5D95649EC7D3570\n    Session-ID-ctx: \n    Master-Key: B9F02420631DE6C7D1612AF06AB33275D4BB6E0BAE32372EFF94C963E1E3D81823F890B2B7A4CBAB36D7C042B4B4FA2F\n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    TLS session ticket lifetime hint: 7200 (seconds)\n    TLS session ticket:\n    0000 - b4 3b 82 a9 3a 04 4d 19-41 b9 aa aa 07 83 70 da   .;..:.M.A.....p.\n    0010 - 7a 0d eb ef 49 35 96 44-27 06 6c a5 f4 3a e7 98   z...I5.D'.l..:..\n    0020 - 62 c7 85 e2 bd ce 86 f4-65 69 a9 a2 2e 68 82 aa   b.......ei...h..\n    0030 - 63 75 dc 56 5e b2 20 c7-96 50 69 05 fd b6 42 0a   cu.V^. ..Pi...B.\n    0040 - 74 6b f0 ac 5c ed 93 0b-b0 36 78 d6 e8 3e 1d 9a   tk..\\....6x..>..\n    0050 - 76 4b 32 db e1 31 44 97-6e 76 2f d6 ad 03 80 c8   vK2..1D.nv/.....\n    0060 - bf 9c b4 93 95 22 03 61-f8 58 d9 40 64 80 99 ea   .....\".a.X.@d...\n    0070 - 87 04 ae d8 31 b1 50 29-e4 3c 9a 8a 82 b2 9a 8a   ....1.P).<......\n    0080 - e9 b8 e1 86 69 87 a2 73-82 82 6e 77 6d 36 39 30   ....i..s..nwm690\n    0090 - f0 f0 cb 14 42 88 e2 fa-c7 9b ca 4c 41 20 1d a2   ....B......LA ..\n    00a0 - 8a 43 05 07 27 90 d8 a6-d4 c0 8d c2 e9 27 1b 8a   .C..'........'..\n\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=1 CN=TLS-LAB Trusted Root CA\nverify return:1\ndepth=0 CN=tls-lab.example.test\nverify return:1\nDONE",
+      "scenario": "good",
+      "expected_certificate_status": "VALID",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15113,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.3",
+      "negotiated_tls": "TLSv1.3",
+      "certificate_status": "VALID",
+      "certificate_authenticated": true,
+      "spki_authorized": true,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": true,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "40d6a441eb3a09e6e68599e6ba03536ca29760de3c78937866e5302a029fd6a9",
+        "spki_sha256": "d2c05db9ff4c554f8060a5ecd69af76bf7981f185d6c20c4cc3a0d4b6581ffac"
+      },
+      "verify_excerpt": "YxMTI1MDE0NzUxWjAfMR0wGwYDVQQDDBR0bHMtbGFiLmV4YW1w\nbGUudGVzdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANJItNo48eO6\nHeB8DwtKYy0HdG+atEPF5Y+3Gnva/T8LkabYJX+c3LOsJzcOp4B12UeLY+QrdhV9\nWX+O+SiJyhULlQaMh9FssDHuh2n9QQ1xfamIDr0bN42BWRvZ3RaGZoJpNUtlkGAc\nRc5kMgaT7lXACuQAf3egZn3eI7DkFWNB2uv7lLDHrX4rjt3RcD2hXdwjg4pDNgHZ\nsX8WLsk7Ed30u4PkhSdLs6qCoGct92THxw/DhYYwx1ZeAY7xp1T8UND/ZasGeHTC\nqbus0HcBPdrcuLH9uX8RRYaSDNdEBldX7vQVkhykDxjyyPZzxsMLgQxopq9qIuIc\nF9xoq8RP+zcCAwEAAaOBlzCBlDAMBgNVHRMBAf8EAjAAMB8GA1UdEQQYMBaCFHRs\ncy1sYWIuZXhhbXBsZS50ZXN0MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggr\nBgEFBQcDATAdBgNVHQ4EFgQUmP27ZvxqSioqRnhAgM1Ni2P+4qgwHwYDVR0jBBgw\nFoAUN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBAAdXbOLG\njTZ14r0lT2T/nGnL7jSqvAbaHWBLTgtNcExAnO5s4iD8R4zs53axsXgEqixRvPr1\nNbFPTsyab3Rg62M7cFPoF/NrXHl5UUs0Q0fQjw9RDa+t+WJVLn8G/nKXfwuxlXD9\niY9xCGXa0SFRo6XCiPhSgresZg6ra9MMWL1UvvVEHddFSes702+oY1fFSWqHJhJV\nZrXmJFzOFgNeoXfzZfdAhCfBY9Fy5XhihKk7YdhhhoSiuFc/xujJ3fo2wvVB5aYo\n+hG3Vv56J8VxardMsg93oZn48C2Ma6lw94o60xBBr/7Y1SFyDkp1V3CAJCEsVEEj\nqDQWv8OLI6ADAaw=\n-----END CERTIFICATE-----\n---\nServer certificate\nsubject=CN=tls-lab.example.test\nissuer=CN=TLS-LAB Trusted Root CA\n---\nNo client certificate CA names sent\nPeer signing digest: SHA256\nPeer signature type: rsa_pss_rsae_sha256\nNegotiated TLS1.3 group: X25519MLKEM768\n---\nSSL handshake has read 2519 bytes and written 1569 bytes\nVerification: OK\nVerified peername: tls-lab.example.test\n---\nNew, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384\nProtocol: TLSv1.3\nServer public key is 2048 bit\nThis TLS version forbids renegotiation.\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nEarly data was not sent\nVerify return code: 0 (ok)\n---\n\nConnecting to 127.0.0.1\ndepth=1 CN=TLS-LAB Trusted Root CA\nverify return:1\ndepth=0 CN=tls-lab.example.test\nverify return:1\nDONE",
+      "scenario": "good",
+      "expected_certificate_status": "VALID",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15211,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.1",
+      "negotiated_tls": "TLSv1.1",
+      "certificate_status": "SELF_SIGNED",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "DEPRECATED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=tls-lab.example.test",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "fa8c9f91d04b2760ff32e6083fc02aaecf72deeb8b9b2601fa920c9e668d45d2",
+        "spki_sha256": "26ca8a6dcbbd223260ddc3148dd5772ef9ed6b9d246b0bfce4f0e6497b79ba4f"
+      },
+      "verify_excerpt": "ADggEPADCCAQoCggEBAK7s88LcfkNQIdx+\nVR41VJEpc9/TqdbcxTDkO2/39KyTot4ZKoaXiYDafWR1LYsYTMSV3dhjtM8IhvwI\n66LNpXrUk9nheHRe3rZiPTWzQisSTNRp6zDsZF2wJGjp9XZdnnl8MDvmYdfrNASp\nu2wbUpb1dniMT5Jr/aIiO0QxV3tMnqDpgKLlJEDHOdRw2vzpK7sKJ9r21bf6cZJ6\nEy7SK7exW6MTrhyLB53kw8IKOd/3pJHI744R/HO8JjZUyE6HWSB07Dr91w5qxVek\nAj9BqZafumYNYzsAJ0jlRo/lKpSSxnOlOVySxBa25a9v5cHIIpFtpdoBpAyOeYjY\nxhSwjXUCAwEAAaN1MHMwDAYDVR0TAQH/BAIwADAfBgNVHREEGDAWghR0bHMtbGFi\nLmV4YW1wbGUudGVzdDAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUH\nAwEwHQYDVR0OBBYEFCsjJEP4DYz72q4X1mGqmcHSzjsNMA0GCSqGSIb3DQEBCwUA\nA4IBAQB3/55iEZZgcj+cqcJ5qQcvFSZIebiZs6WmiBJsT6zXyfq9DtfmI3hhfDA3\n4Rl+Hyz78fFUmNmAg+vuTEyXZnbRIoGspRa6UPZGcQFpFiaY1VYiUBJWSVsHOoqs\nBZmuDQdllpUNrzGQit28DH6S/Q5lR0jYH9YAHbM+iXCdUIJ+o/A7RolbPYm0Hu7k\nrJtrXN41bI5ACIRMk6Y6QmjxxhU+8ufcFjlCkmfBv2zydzroYDzUQvYGcdde0Q6s\nC1YTzruaTAthdgTMQkSATjWtigkSoCxih6paIy+YH3B+WlhVxNqov7w12kR5DyD7\nf1OC7h+ZasVNEZayIL5CNf6UJK5j\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\n---\nSSL handshake has read 926 bytes and written 143 bytes\nVerification error: self-signed certificate\n---\nNew, (NONE), Cipher is (NONE)\nProtocol: TLSv1.1\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.1\n    Cipher    : 0000\n    Session-ID: \n    Session-ID-ctx: \n    Master-Key: \n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=0 CN=tls-lab.example.test\nverify error:num=18:self-signed certificate\n40D7FCF1967F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "self_signed",
+      "expected_certificate_status": "SELF_SIGNED",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15212,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.2",
+      "negotiated_tls": "TLSv1.2",
+      "certificate_status": "SELF_SIGNED",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=tls-lab.example.test",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "fa8c9f91d04b2760ff32e6083fc02aaecf72deeb8b9b2601fa920c9e668d45d2",
+        "spki_sha256": "26ca8a6dcbbd223260ddc3148dd5772ef9ed6b9d246b0bfce4f0e6497b79ba4f"
+      },
+      "verify_excerpt": "ADggEPADCCAQoCggEBAK7s88LcfkNQIdx+\nVR41VJEpc9/TqdbcxTDkO2/39KyTot4ZKoaXiYDafWR1LYsYTMSV3dhjtM8IhvwI\n66LNpXrUk9nheHRe3rZiPTWzQisSTNRp6zDsZF2wJGjp9XZdnnl8MDvmYdfrNASp\nu2wbUpb1dniMT5Jr/aIiO0QxV3tMnqDpgKLlJEDHOdRw2vzpK7sKJ9r21bf6cZJ6\nEy7SK7exW6MTrhyLB53kw8IKOd/3pJHI744R/HO8JjZUyE6HWSB07Dr91w5qxVek\nAj9BqZafumYNYzsAJ0jlRo/lKpSSxnOlOVySxBa25a9v5cHIIpFtpdoBpAyOeYjY\nxhSwjXUCAwEAAaN1MHMwDAYDVR0TAQH/BAIwADAfBgNVHREEGDAWghR0bHMtbGFi\nLmV4YW1wbGUudGVzdDAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUH\nAwEwHQYDVR0OBBYEFCsjJEP4DYz72q4X1mGqmcHSzjsNMA0GCSqGSIb3DQEBCwUA\nA4IBAQB3/55iEZZgcj+cqcJ5qQcvFSZIebiZs6WmiBJsT6zXyfq9DtfmI3hhfDA3\n4Rl+Hyz78fFUmNmAg+vuTEyXZnbRIoGspRa6UPZGcQFpFiaY1VYiUBJWSVsHOoqs\nBZmuDQdllpUNrzGQit28DH6S/Q5lR0jYH9YAHbM+iXCdUIJ+o/A7RolbPYm0Hu7k\nrJtrXN41bI5ACIRMk6Y6QmjxxhU+8ufcFjlCkmfBv2zydzroYDzUQvYGcdde0Q6s\nC1YTzruaTAthdgTMQkSATjWtigkSoCxih6paIy+YH3B+WlhVxNqov7w12kR5DyD7\nf1OC7h+ZasVNEZayIL5CNf6UJK5j\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\n---\nSSL handshake has read 922 bytes and written 227 bytes\nVerification error: self-signed certificate\n---\nNew, (NONE), Cipher is (NONE)\nProtocol: TLSv1.2\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.2\n    Cipher    : 0000\n    Session-ID: \n    Session-ID-ctx: \n    Master-Key: \n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=0 CN=tls-lab.example.test\nverify error:num=18:self-signed certificate\n400761BCCE7F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "self_signed",
+      "expected_certificate_status": "SELF_SIGNED",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15213,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.3",
+      "negotiated_tls": "TLSv1.3",
+      "certificate_status": "SELF_SIGNED",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=tls-lab.example.test",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "fa8c9f91d04b2760ff32e6083fc02aaecf72deeb8b9b2601fa920c9e668d45d2",
+        "spki_sha256": "26ca8a6dcbbd223260ddc3148dd5772ef9ed6b9d246b0bfce4f0e6497b79ba4f"
+      },
+      "verify_excerpt": "NAQEL\nBQAwHzEdMBsGA1UEAwwUdGxzLWxhYi5leGFtcGxlLnRlc3QwHhcNMjYxMTE3MDE0\nNzUxWhcNMjYxMTI1MDE0NzUxWjAfMR0wGwYDVQQDDBR0bHMtbGFiLmV4YW1wbGUu\ndGVzdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK7s88LcfkNQIdx+\nVR41VJEpc9/TqdbcxTDkO2/39KyTot4ZKoaXiYDafWR1LYsYTMSV3dhjtM8IhvwI\n66LNpXrUk9nheHRe3rZiPTWzQisSTNRp6zDsZF2wJGjp9XZdnnl8MDvmYdfrNASp\nu2wbUpb1dniMT5Jr/aIiO0QxV3tMnqDpgKLlJEDHOdRw2vzpK7sKJ9r21bf6cZJ6\nEy7SK7exW6MTrhyLB53kw8IKOd/3pJHI744R/HO8JjZUyE6HWSB07Dr91w5qxVek\nAj9BqZafumYNYzsAJ0jlRo/lKpSSxnOlOVySxBa25a9v5cHIIpFtpdoBpAyOeYjY\nxhSwjXUCAwEAAaN1MHMwDAYDVR0TAQH/BAIwADAfBgNVHREEGDAWghR0bHMtbGFi\nLmV4YW1wbGUudGVzdDAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUH\nAwEwHQYDVR0OBBYEFCsjJEP4DYz72q4X1mGqmcHSzjsNMA0GCSqGSIb3DQEBCwUA\nA4IBAQB3/55iEZZgcj+cqcJ5qQcvFSZIebiZs6WmiBJsT6zXyfq9DtfmI3hhfDA3\n4Rl+Hyz78fFUmNmAg+vuTEyXZnbRIoGspRa6UPZGcQFpFiaY1VYiUBJWSVsHOoqs\nBZmuDQdllpUNrzGQit28DH6S/Q5lR0jYH9YAHbM+iXCdUIJ+o/A7RolbPYm0Hu7k\nrJtrXN41bI5ACIRMk6Y6QmjxxhU+8ufcFjlCkmfBv2zydzroYDzUQvYGcdde0Q6s\nC1YTzruaTAthdgTMQkSATjWtigkSoCxih6paIy+YH3B+WlhVxNqov7w12kR5DyD7\nf1OC7h+ZasVNEZayIL5CNf6UJK5j\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\nNegotiated TLS1.3 group: X25519MLKEM768\n---\nSSL handshake has read 2121 bytes and written 1496 bytes\nVerification error: self-signed certificate\n---\nNew, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384\nProtocol: TLSv1.3\nThis TLS version forbids renegotiation.\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nEarly data was not sent\nVerify return code: 18 (self-signed certificate)\n---\n\nConnecting to 127.0.0.1\ndepth=0 CN=tls-lab.example.test\nverify error:num=18:self-signed certificate\n40E7AE9DBD7F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "self_signed",
+      "expected_certificate_status": "SELF_SIGNED",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15311,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.1",
+      "negotiated_tls": "TLSv1.1",
+      "certificate_status": "UNKNOWN_ISSUER",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "DEPRECATED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Unauthorized Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "a5ccb02705d5f79ed50a37a86eb592712f9c75c01bd03e17ee0052a02a13ea50",
+        "spki_sha256": "6d4286508efff8f77edec303c5280554e4edfde4bf6cf5fcee6f1ed26a13f183"
+      },
+      "verify_excerpt": "7J/rnfOD\nm6zxSHaPtrbm6TjC7vQnAOZ9hsCZ1Y2V+uPnx5Li7tqddn1f0DZk70YHBaCFTqVv\n00/5bzjPRHG/WysypJ34kPUljGXpDqEniqw2v+OpP9JIKnCy4bC//ShO8bnOGNVZ\n8iravHt4ccZU3cdPwwMDJ6/OqS8H4vdcy4o3vNhgMEc3kqJnSgKEBvXj6La7UhNO\n/0NQqvFda5QLDKyewNhs9oOeFjzKZjzu8nAnDOlEYG48+kUq88+46WAoUAC5i52a\nOrTsKL5cvL1JCxVC3QIDAQABo4GXMIGUMAwGA1UdEwEB/wQCMAAwHwYDVR0RBBgw\nFoIUdGxzLWxhYi5leGFtcGxlLnRlc3QwDgYDVR0PAQH/BAQDAgWgMBMGA1UdJQQM\nMAoGCCsGAQUFBwMBMB0GA1UdDgQWBBQ+LFbWpA09h4efTnqeGvKTh4BCRzAfBgNV\nHSMEGDAWgBRNHHclTxqNCZgs+acY+c+vf5F9hTANBgkqhkiG9w0BAQsFAAOCAQEA\nGdvRC2bKJPsV+HOXekGG1BMEarvnd4WgInkiGkambUbNkXmauvjwB+YFsyM0anAM\nuJ5/3tfhZtv7NpI4jpnColdYtWZ2XYk4c2BzDhdyl9m4R5GKoQ04sv9M0rPMDcs6\n2CAeB9bOM0kZB18cTo0e8J0tQAp7dp05GpF487M3f8WvVWzdncbSV55MvakMygTl\nAF7AsltYPZKF5Mzt5bkVNSwAJFP57xh3CitHAbOo1KRaXfG8hdRwrDRdqMVYb0f+\n38EEdPvT/ElbGJ6B7WlB+rC/KaXRXzL36u4xGCNjhG/usD/7igaPQeDjuwqcL8aJ\ntWhGD/xOzBsdgnD5w1iSbQ==\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\n---\nSSL handshake has read 969 bytes and written 143 bytes\nVerification error: unable to get local issuer certificate\n---\nNew, (NONE), Cipher is (NONE)\nProtocol: TLSv1.1\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.1\n    Cipher    : 0000\n    Session-ID: \n    Session-ID-ctx: \n    Master-Key: \n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=0 CN=tls-lab.example.test\nverify error:num=20:unable to get local issuer certificate\n40371D912B7F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "rogue_ca",
+      "expected_certificate_status": "UNKNOWN_ISSUER",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15312,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.2",
+      "negotiated_tls": "TLSv1.2",
+      "certificate_status": "UNKNOWN_ISSUER",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Unauthorized Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "a5ccb02705d5f79ed50a37a86eb592712f9c75c01bd03e17ee0052a02a13ea50",
+        "spki_sha256": "6d4286508efff8f77edec303c5280554e4edfde4bf6cf5fcee6f1ed26a13f183"
+      },
+      "verify_excerpt": "7J/rnfOD\nm6zxSHaPtrbm6TjC7vQnAOZ9hsCZ1Y2V+uPnx5Li7tqddn1f0DZk70YHBaCFTqVv\n00/5bzjPRHG/WysypJ34kPUljGXpDqEniqw2v+OpP9JIKnCy4bC//ShO8bnOGNVZ\n8iravHt4ccZU3cdPwwMDJ6/OqS8H4vdcy4o3vNhgMEc3kqJnSgKEBvXj6La7UhNO\n/0NQqvFda5QLDKyewNhs9oOeFjzKZjzu8nAnDOlEYG48+kUq88+46WAoUAC5i52a\nOrTsKL5cvL1JCxVC3QIDAQABo4GXMIGUMAwGA1UdEwEB/wQCMAAwHwYDVR0RBBgw\nFoIUdGxzLWxhYi5leGFtcGxlLnRlc3QwDgYDVR0PAQH/BAQDAgWgMBMGA1UdJQQM\nMAoGCCsGAQUFBwMBMB0GA1UdDgQWBBQ+LFbWpA09h4efTnqeGvKTh4BCRzAfBgNV\nHSMEGDAWgBRNHHclTxqNCZgs+acY+c+vf5F9hTANBgkqhkiG9w0BAQsFAAOCAQEA\nGdvRC2bKJPsV+HOXekGG1BMEarvnd4WgInkiGkambUbNkXmauvjwB+YFsyM0anAM\nuJ5/3tfhZtv7NpI4jpnColdYtWZ2XYk4c2BzDhdyl9m4R5GKoQ04sv9M0rPMDcs6\n2CAeB9bOM0kZB18cTo0e8J0tQAp7dp05GpF487M3f8WvVWzdncbSV55MvakMygTl\nAF7AsltYPZKF5Mzt5bkVNSwAJFP57xh3CitHAbOo1KRaXfG8hdRwrDRdqMVYb0f+\n38EEdPvT/ElbGJ6B7WlB+rC/KaXRXzL36u4xGCNjhG/usD/7igaPQeDjuwqcL8aJ\ntWhGD/xOzBsdgnD5w1iSbQ==\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\n---\nSSL handshake has read 965 bytes and written 227 bytes\nVerification error: unable to get local issuer certificate\n---\nNew, (NONE), Cipher is (NONE)\nProtocol: TLSv1.2\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.2\n    Cipher    : 0000\n    Session-ID: \n    Session-ID-ctx: \n    Master-Key: \n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=0 CN=tls-lab.example.test\nverify error:num=20:unable to get local issuer certificate\n4037E406C47F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "rogue_ca",
+      "expected_certificate_status": "UNKNOWN_ISSUER",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15313,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.3",
+      "negotiated_tls": "TLSv1.3",
+      "certificate_status": "UNKNOWN_ISSUER",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Unauthorized Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "a5ccb02705d5f79ed50a37a86eb592712f9c75c01bd03e17ee0052a02a13ea50",
+        "spki_sha256": "6d4286508efff8f77edec303c5280554e4edfde4bf6cf5fcee6f1ed26a13f183"
+      },
+      "verify_excerpt": "aMB8xHTAbBgNVBAMMFHRscy1sYWIu\nZXhhbXBsZS50ZXN0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp47U\nSeuweymjMRLD6bkT7IVfnJVvhGcBXBs6MshtzDBhtRe+zwmMLZjE3gr07J/rnfOD\nm6zxSHaPtrbm6TjC7vQnAOZ9hsCZ1Y2V+uPnx5Li7tqddn1f0DZk70YHBaCFTqVv\n00/5bzjPRHG/WysypJ34kPUljGXpDqEniqw2v+OpP9JIKnCy4bC//ShO8bnOGNVZ\n8iravHt4ccZU3cdPwwMDJ6/OqS8H4vdcy4o3vNhgMEc3kqJnSgKEBvXj6La7UhNO\n/0NQqvFda5QLDKyewNhs9oOeFjzKZjzu8nAnDOlEYG48+kUq88+46WAoUAC5i52a\nOrTsKL5cvL1JCxVC3QIDAQABo4GXMIGUMAwGA1UdEwEB/wQCMAAwHwYDVR0RBBgw\nFoIUdGxzLWxhYi5leGFtcGxlLnRlc3QwDgYDVR0PAQH/BAQDAgWgMBMGA1UdJQQM\nMAoGCCsGAQUFBwMBMB0GA1UdDgQWBBQ+LFbWpA09h4efTnqeGvKTh4BCRzAfBgNV\nHSMEGDAWgBRNHHclTxqNCZgs+acY+c+vf5F9hTANBgkqhkiG9w0BAQsFAAOCAQEA\nGdvRC2bKJPsV+HOXekGG1BMEarvnd4WgInkiGkambUbNkXmauvjwB+YFsyM0anAM\nuJ5/3tfhZtv7NpI4jpnColdYtWZ2XYk4c2BzDhdyl9m4R5GKoQ04sv9M0rPMDcs6\n2CAeB9bOM0kZB18cTo0e8J0tQAp7dp05GpF487M3f8WvVWzdncbSV55MvakMygTl\nAF7AsltYPZKF5Mzt5bkVNSwAJFP57xh3CitHAbOo1KRaXfG8hdRwrDRdqMVYb0f+\n38EEdPvT/ElbGJ6B7WlB+rC/KaXRXzL36u4xGCNjhG/usD/7igaPQeDjuwqcL8aJ\ntWhGD/xOzBsdgnD5w1iSbQ==\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\nNegotiated TLS1.3 group: X25519MLKEM768\n---\nSSL handshake has read 2164 bytes and written 1496 bytes\nVerification error: unable to get local issuer certificate\n---\nNew, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384\nProtocol: TLSv1.3\nThis TLS version forbids renegotiation.\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nEarly data was not sent\nVerify return code: 20 (unable to get local issuer certificate)\n---\n\nConnecting to 127.0.0.1\ndepth=0 CN=tls-lab.example.test\nverify error:num=20:unable to get local issuer certificate\n4087A017457F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "rogue_ca",
+      "expected_certificate_status": "UNKNOWN_ISSUER",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15411,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.1",
+      "negotiated_tls": "TLSv1.1",
+      "certificate_status": "HOSTNAME_MISMATCH",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "DEPRECATED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "unrelated.invalid"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "f124ee52a75a040c386cb63565a7a1c30dbd14e68ada452dce5ce249f4885393",
+        "spki_sha256": "f2f4e1a08e9276e932bbbab3238be2f8cf79a2d97a5f15e060256fddf4994bcb"
+      },
+      "verify_excerpt": "ZqwnlzzWKrr/jraDizws8yQ5OGvCQOubPI1k9RXeNINJprPwDBI6oXbQWSrjJs\nThiLKloRNl39S+VS0Em9ocqVnHikQ+DPpnDWSUdsjhQONjkEsjVGh2s+pktLxsFD\nsrG7i2RfNbMQxfRrd0jfYDlEEqCL07qxreTYBbLnU0LNvPx4qwWsqsnrGQSHbi7z\np/69r9sYP4rLG3i8dPpPs4yeEJTY5El96b1lvZKvuDyH/uv50Z/uyvlMrJ0Yx+U8\n46fZDCcl4fjU3su6GJkzVMVY4yh3Khb+5VBo35S5vXZSGBDD4YPubBReaG/6LljP\nAOwbFeZ4a68CAwEAAaOBlDCBkTAMBgNVHRMBAf8EAjAAMBwGA1UdEQQVMBOCEXVu\ncmVsYXRlZC5pbnZhbGlkMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEF\nBQcDATAdBgNVHQ4EFgQU+L+DS9WVKrOeTIqCQxJTXS1WXM0wHwYDVR0jBBgwFoAU\nN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBAAlcRWdW/XaF\nOxZlW42wdTQcujiNVJvP3bhay1a9RqYVwNNpNeKo42I7QQ5eGA3+npT8dbAsqs05\nsY+GHdi899XY7daXUgLN2gdvZP0SIAXK6eoSRbN1voRe9npy4Bx90l6IsFiZkAkI\n7UPksOTmL1TbhdHQpXPuTec7GL6fXLidB/Lw/MLrCFpVXQpm2kabghlVvIVwjLHK\nvfzDo992UzW1VKVJ64oPdy+CSZiGdl73ifUY1BfS/eglZZtYDm09N3sOIYto8yQH\nUBGaspV2dNarGKywDK4xP7pLo5BT5tdprDLQDy1pZmFUMwuvxfn2c6t+4U4E25x4\noa0vzSGBvQc=\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\n---\nSSL handshake has read 961 bytes and written 143 bytes\nVerification error: hostname mismatch\n---\nNew, (NONE), Cipher is (NONE)\nProtocol: TLSv1.1\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.1\n    Cipher    : 0000\n    Session-ID: \n    Session-ID-ctx: \n    Master-Key: \n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=0 CN=tls-lab.example.test\nverify error:num=62:hostname mismatch\n4067DE79A47F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "wrong_san",
+      "expected_certificate_status": "HOSTNAME_MISMATCH",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15412,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.2",
+      "negotiated_tls": "TLSv1.2",
+      "certificate_status": "HOSTNAME_MISMATCH",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "unrelated.invalid"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "f124ee52a75a040c386cb63565a7a1c30dbd14e68ada452dce5ce249f4885393",
+        "spki_sha256": "f2f4e1a08e9276e932bbbab3238be2f8cf79a2d97a5f15e060256fddf4994bcb"
+      },
+      "verify_excerpt": "ZqwnlzzWKrr/jraDizws8yQ5OGvCQOubPI1k9RXeNINJprPwDBI6oXbQWSrjJs\nThiLKloRNl39S+VS0Em9ocqVnHikQ+DPpnDWSUdsjhQONjkEsjVGh2s+pktLxsFD\nsrG7i2RfNbMQxfRrd0jfYDlEEqCL07qxreTYBbLnU0LNvPx4qwWsqsnrGQSHbi7z\np/69r9sYP4rLG3i8dPpPs4yeEJTY5El96b1lvZKvuDyH/uv50Z/uyvlMrJ0Yx+U8\n46fZDCcl4fjU3su6GJkzVMVY4yh3Khb+5VBo35S5vXZSGBDD4YPubBReaG/6LljP\nAOwbFeZ4a68CAwEAAaOBlDCBkTAMBgNVHRMBAf8EAjAAMBwGA1UdEQQVMBOCEXVu\ncmVsYXRlZC5pbnZhbGlkMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEF\nBQcDATAdBgNVHQ4EFgQU+L+DS9WVKrOeTIqCQxJTXS1WXM0wHwYDVR0jBBgwFoAU\nN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBAAlcRWdW/XaF\nOxZlW42wdTQcujiNVJvP3bhay1a9RqYVwNNpNeKo42I7QQ5eGA3+npT8dbAsqs05\nsY+GHdi899XY7daXUgLN2gdvZP0SIAXK6eoSRbN1voRe9npy4Bx90l6IsFiZkAkI\n7UPksOTmL1TbhdHQpXPuTec7GL6fXLidB/Lw/MLrCFpVXQpm2kabghlVvIVwjLHK\nvfzDo992UzW1VKVJ64oPdy+CSZiGdl73ifUY1BfS/eglZZtYDm09N3sOIYto8yQH\nUBGaspV2dNarGKywDK4xP7pLo5BT5tdprDLQDy1pZmFUMwuvxfn2c6t+4U4E25x4\noa0vzSGBvQc=\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\n---\nSSL handshake has read 957 bytes and written 227 bytes\nVerification error: hostname mismatch\n---\nNew, (NONE), Cipher is (NONE)\nProtocol: TLSv1.2\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.2\n    Cipher    : 0000\n    Session-ID: \n    Session-ID-ctx: \n    Master-Key: \n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=0 CN=tls-lab.example.test\nverify error:num=62:hostname mismatch\n40F73749B57F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "wrong_san",
+      "expected_certificate_status": "HOSTNAME_MISMATCH",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15413,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.3",
+      "negotiated_tls": "TLSv1.3",
+      "certificate_status": "HOSTNAME_MISMATCH",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "unrelated.invalid"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "f124ee52a75a040c386cb63565a7a1c30dbd14e68ada452dce5ce249f4885393",
+        "spki_sha256": "f2f4e1a08e9276e932bbbab3238be2f8cf79a2d97a5f15e060256fddf4994bcb"
+      },
+      "verify_excerpt": "UxBQiBUcnVzdGVkIFJvb3QgQ0EwHhcNMjYxMTE3\nMDE0NzUxWhcNMjYxMTI1MDE0NzUxWjAfMR0wGwYDVQQDDBR0bHMtbGFiLmV4YW1w\nbGUudGVzdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMDzZH5Ij/4U\nZDZqwnlzzWKrr/jraDizws8yQ5OGvCQOubPI1k9RXeNINJprPwDBI6oXbQWSrjJs\nThiLKloRNl39S+VS0Em9ocqVnHikQ+DPpnDWSUdsjhQONjkEsjVGh2s+pktLxsFD\nsrG7i2RfNbMQxfRrd0jfYDlEEqCL07qxreTYBbLnU0LNvPx4qwWsqsnrGQSHbi7z\np/69r9sYP4rLG3i8dPpPs4yeEJTY5El96b1lvZKvuDyH/uv50Z/uyvlMrJ0Yx+U8\n46fZDCcl4fjU3su6GJkzVMVY4yh3Khb+5VBo35S5vXZSGBDD4YPubBReaG/6LljP\nAOwbFeZ4a68CAwEAAaOBlDCBkTAMBgNVHRMBAf8EAjAAMBwGA1UdEQQVMBOCEXVu\ncmVsYXRlZC5pbnZhbGlkMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEF\nBQcDATAdBgNVHQ4EFgQU+L+DS9WVKrOeTIqCQxJTXS1WXM0wHwYDVR0jBBgwFoAU\nN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBAAlcRWdW/XaF\nOxZlW42wdTQcujiNVJvP3bhay1a9RqYVwNNpNeKo42I7QQ5eGA3+npT8dbAsqs05\nsY+GHdi899XY7daXUgLN2gdvZP0SIAXK6eoSRbN1voRe9npy4Bx90l6IsFiZkAkI\n7UPksOTmL1TbhdHQpXPuTec7GL6fXLidB/Lw/MLrCFpVXQpm2kabghlVvIVwjLHK\nvfzDo992UzW1VKVJ64oPdy+CSZiGdl73ifUY1BfS/eglZZtYDm09N3sOIYto8yQH\nUBGaspV2dNarGKywDK4xP7pLo5BT5tdprDLQDy1pZmFUMwuvxfn2c6t+4U4E25x4\noa0vzSGBvQc=\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\nNegotiated TLS1.3 group: X25519MLKEM768\n---\nSSL handshake has read 2156 bytes and written 1496 bytes\nVerification error: hostname mismatch\n---\nNew, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384\nProtocol: TLSv1.3\nThis TLS version forbids renegotiation.\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nEarly data was not sent\nVerify return code: 62 (hostname mismatch)\n---\n\nConnecting to 127.0.0.1\ndepth=0 CN=tls-lab.example.test\nverify error:num=62:hostname mismatch\n40B79D51307F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "wrong_san",
+      "expected_certificate_status": "HOSTNAME_MISMATCH",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15511,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.1",
+      "negotiated_tls": "TLSv1.1",
+      "certificate_status": "EXPIRED",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "DEPRECATED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-10-14T01:47:51+00:00",
+        "not_after": "2026-11-17T01:47:51+00:00",
+        "fingerprint_sha256": "5147fe326fd7995ec234f089a8f0375b343ba2acd1287739eecb62d9e37fbccb",
+        "spki_sha256": "4260095c75a3b0ce4adbe18f6fed6f2ea4cb1154cf1fcdee6366847c2320faaf"
+      },
+      "verify_excerpt": "uwk9T1j5KqDxoXPriMlBOfTpqg\nKkdJ0mRqnTB5YebaWUmy2ngr6PQk2IWlWOsg0QHCCafj4B7PCh0AKa2cmS3wcCm9\nzIfLLMigP/CNrL5TDir2Et+uLrESEJ+A9w+xNWdU/LQ04TWUGNyhwMb4kQcky2CN\n5zEnAap4weeRZudvUnm77jwS2fRjUcmMDK+dG/JxkCpCKYehAub7U8xqmv8DE1Ui\nVC7XEydbVI8CAwEAAaOBlzCBlDAMBgNVHRMBAf8EAjAAMB8GA1UdEQQYMBaCFHRs\ncy1sYWIuZXhhbXBsZS50ZXN0MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggr\nBgEFBQcDATAdBgNVHQ4EFgQUGlMoY3pz10RLg6/INbRyFFfTwwkwHwYDVR0jBBgw\nFoAUN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBAM3I+Ghk\nyE7MQ6i40yC6OZhzshTt7AifTCVc19btxa9xMRmRVJtuXln6ChrG5HfqbkOMn7K6\nvoUxpbtjWtSeLwkm28wQD6Kq4T0unWITBdvtWRGSpBcnr3dQy+K6XK150CUqZaiP\nYU5tFLUaUPcRvEC89d4ZGIkyHPHen91dAHvA+BU2ZNGze7OUJkaWtr0PtWoZYBhG\nxQTqaq/R+7qY9C8PWbQI5b3u8DRiAbP7hZDWgC0Z+pRfx5iqZ2knjWYpL/q3JORZ\nCEiNpHxh8SCiATzLGQWGOZc+Y120S5NhacdEr3xWucg0k++tSKkUcNVQOc213nHT\nl+Ik6RKhLQGEjr8=\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\n---\nSSL handshake has read 964 bytes and written 143 bytes\nVerification error: certificate has expired\n---\nNew, (NONE), Cipher is (NONE)\nProtocol: TLSv1.1\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.1\n    Cipher    : 0000\n    Session-ID: \n    Session-ID-ctx: \n    Master-Key: \n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=1 CN=TLS-LAB Trusted Root CA\nverify return:1\ndepth=0 CN=tls-lab.example.test\nverify error:num=10:certificate has expired\nnotAfter=Nov 17 01:47:51 2026 GMT\n40970943C17F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "expired",
+      "expected_certificate_status": "EXPIRED",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15512,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.2",
+      "negotiated_tls": "TLSv1.2",
+      "certificate_status": "EXPIRED",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-10-14T01:47:51+00:00",
+        "not_after": "2026-11-17T01:47:51+00:00",
+        "fingerprint_sha256": "5147fe326fd7995ec234f089a8f0375b343ba2acd1287739eecb62d9e37fbccb",
+        "spki_sha256": "4260095c75a3b0ce4adbe18f6fed6f2ea4cb1154cf1fcdee6366847c2320faaf"
+      },
+      "verify_excerpt": "uwk9T1j5KqDxoXPriMlBOfTpqg\nKkdJ0mRqnTB5YebaWUmy2ngr6PQk2IWlWOsg0QHCCafj4B7PCh0AKa2cmS3wcCm9\nzIfLLMigP/CNrL5TDir2Et+uLrESEJ+A9w+xNWdU/LQ04TWUGNyhwMb4kQcky2CN\n5zEnAap4weeRZudvUnm77jwS2fRjUcmMDK+dG/JxkCpCKYehAub7U8xqmv8DE1Ui\nVC7XEydbVI8CAwEAAaOBlzCBlDAMBgNVHRMBAf8EAjAAMB8GA1UdEQQYMBaCFHRs\ncy1sYWIuZXhhbXBsZS50ZXN0MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggr\nBgEFBQcDATAdBgNVHQ4EFgQUGlMoY3pz10RLg6/INbRyFFfTwwkwHwYDVR0jBBgw\nFoAUN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBAM3I+Ghk\nyE7MQ6i40yC6OZhzshTt7AifTCVc19btxa9xMRmRVJtuXln6ChrG5HfqbkOMn7K6\nvoUxpbtjWtSeLwkm28wQD6Kq4T0unWITBdvtWRGSpBcnr3dQy+K6XK150CUqZaiP\nYU5tFLUaUPcRvEC89d4ZGIkyHPHen91dAHvA+BU2ZNGze7OUJkaWtr0PtWoZYBhG\nxQTqaq/R+7qY9C8PWbQI5b3u8DRiAbP7hZDWgC0Z+pRfx5iqZ2knjWYpL/q3JORZ\nCEiNpHxh8SCiATzLGQWGOZc+Y120S5NhacdEr3xWucg0k++tSKkUcNVQOc213nHT\nl+Ik6RKhLQGEjr8=\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\n---\nSSL handshake has read 960 bytes and written 227 bytes\nVerification error: certificate has expired\n---\nNew, (NONE), Cipher is (NONE)\nProtocol: TLSv1.2\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.2\n    Cipher    : 0000\n    Session-ID: \n    Session-ID-ctx: \n    Master-Key: \n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=1 CN=TLS-LAB Trusted Root CA\nverify return:1\ndepth=0 CN=tls-lab.example.test\nverify error:num=10:certificate has expired\nnotAfter=Nov 17 01:47:51 2026 GMT\n4097B93FBA7F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "expired",
+      "expected_certificate_status": "EXPIRED",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15513,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.3",
+      "negotiated_tls": "TLSv1.3",
+      "certificate_status": "EXPIRED",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-10-14T01:47:51+00:00",
+        "not_after": "2026-11-17T01:47:51+00:00",
+        "fingerprint_sha256": "5147fe326fd7995ec234f089a8f0375b343ba2acd1287739eecb62d9e37fbccb",
+        "spki_sha256": "4260095c75a3b0ce4adbe18f6fed6f2ea4cb1154cf1fcdee6366847c2320faaf"
+      },
+      "verify_excerpt": "UudGVzdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMklr69t+1PK\nHtJcPQx1LbcKvOiZ3mrAm6QD1NX41RilEVUsTGah/TKBhHDNSHH5/iEY0SBrrdnk\n0RmIb4nGCexc05btxWEeWQVgMa24YSPhftoWubuwk9T1j5KqDxoXPriMlBOfTpqg\nKkdJ0mRqnTB5YebaWUmy2ngr6PQk2IWlWOsg0QHCCafj4B7PCh0AKa2cmS3wcCm9\nzIfLLMigP/CNrL5TDir2Et+uLrESEJ+A9w+xNWdU/LQ04TWUGNyhwMb4kQcky2CN\n5zEnAap4weeRZudvUnm77jwS2fRjUcmMDK+dG/JxkCpCKYehAub7U8xqmv8DE1Ui\nVC7XEydbVI8CAwEAAaOBlzCBlDAMBgNVHRMBAf8EAjAAMB8GA1UdEQQYMBaCFHRs\ncy1sYWIuZXhhbXBsZS50ZXN0MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggr\nBgEFBQcDATAdBgNVHQ4EFgQUGlMoY3pz10RLg6/INbRyFFfTwwkwHwYDVR0jBBgw\nFoAUN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBAM3I+Ghk\nyE7MQ6i40yC6OZhzshTt7AifTCVc19btxa9xMRmRVJtuXln6ChrG5HfqbkOMn7K6\nvoUxpbtjWtSeLwkm28wQD6Kq4T0unWITBdvtWRGSpBcnr3dQy+K6XK150CUqZaiP\nYU5tFLUaUPcRvEC89d4ZGIkyHPHen91dAHvA+BU2ZNGze7OUJkaWtr0PtWoZYBhG\nxQTqaq/R+7qY9C8PWbQI5b3u8DRiAbP7hZDWgC0Z+pRfx5iqZ2knjWYpL/q3JORZ\nCEiNpHxh8SCiATzLGQWGOZc+Y120S5NhacdEr3xWucg0k++tSKkUcNVQOc213nHT\nl+Ik6RKhLQGEjr8=\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\nNegotiated TLS1.3 group: X25519MLKEM768\n---\nSSL handshake has read 2159 bytes and written 1496 bytes\nVerification error: certificate has expired\n---\nNew, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384\nProtocol: TLSv1.3\nThis TLS version forbids renegotiation.\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nEarly data was not sent\nVerify return code: 10 (certificate has expired)\n---\n\nConnecting to 127.0.0.1\ndepth=1 CN=TLS-LAB Trusted Root CA\nverify return:1\ndepth=0 CN=tls-lab.example.test\nverify error:num=10:certificate has expired\nnotAfter=Nov 17 01:47:51 2026 GMT\n4027D3AE817F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "expired",
+      "expected_certificate_status": "EXPIRED",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15611,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.1",
+      "negotiated_tls": "TLSv1.1",
+      "certificate_status": "NOT_YET_VALID",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "DEPRECATED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-20T01:47:51+00:00",
+        "not_after": "2026-12-23T01:47:51+00:00",
+        "fingerprint_sha256": "c6cb084829675796f8635d2b90297c901eb9fb488e8e4a43de1a509ec4938933",
+        "spki_sha256": "bc16a3ab161fdbf3ecf5f7343cf29d3c287f09aac61b14daa65b3cd9997742f1"
+      },
+      "verify_excerpt": "vJJJGLo5fOtLdzHC\nGmayIoRzwB1n0GB4E9ixzhZA33CLHomgk5FX5qDEieqLSwL1puRZcUxFMKRVv5r1\nMK1Bs6qsj72Zg37QzliVSgh5l/9PipzplQ9HUFa7Ec0TgeTQuRFA74W3Z2uD68+w\ngDrGJplVAwIACPVlFbBO1ELUR0Bk5wyhrhtcZOqmvoq6D0uHVKYQlsETxrnNgKO1\nP3v5YHKrxjcCAwEAAaOBlzCBlDAMBgNVHRMBAf8EAjAAMB8GA1UdEQQYMBaCFHRs\ncy1sYWIuZXhhbXBsZS50ZXN0MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggr\nBgEFBQcDATAdBgNVHQ4EFgQUaGYaYbCZScYY1ES3U6ddAV1KKs4wHwYDVR0jBBgw\nFoAUN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBAGYVVfjP\nT4ZK/vulDDbhBrzKKyz9sTwyNvw6sS6E3xtfB+tswfUA2prHxpgbV0oI2N8MxFyN\nOn2f4a3+/Pfr49BdixrW0PNvL3Tn92B2G7EKEKo1ubWv9YxTvzvVS8dyhPN5R382\n7a1jsykq+17alPpN0rUKybeYSaeKoU1yoqu8JX/E1ixWmOkfRtKnV9FUZDE1DDfQ\nd1qFqgX6iLi3Y3LzJ4gSh72UbJblUJcKuivTeR6lReTaCX5kPyqPp42FT7wLsmVu\nYWfhj5snsLmAMXQoDQHP7E+M1JPT3NB2sbHnt0UDUhF7Zx7Fmz7N9QuBtuJ+S9N7\nOsSqt7AFKNxXVCo=\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\n---\nSSL handshake has read 964 bytes and written 143 bytes\nVerification error: certificate is not yet valid\n---\nNew, (NONE), Cipher is (NONE)\nProtocol: TLSv1.1\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.1\n    Cipher    : 0000\n    Session-ID: \n    Session-ID-ctx: \n    Master-Key: \n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=1 CN=TLS-LAB Trusted Root CA\nverify return:1\ndepth=0 CN=tls-lab.example.test\nverify error:num=9:certificate is not yet valid\nnotBefore=Nov 20 01:47:51 2026 GMT\n4047F4DD7C7F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "future",
+      "expected_certificate_status": "NOT_YET_VALID",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15612,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.2",
+      "negotiated_tls": "TLSv1.2",
+      "certificate_status": "NOT_YET_VALID",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-20T01:47:51+00:00",
+        "not_after": "2026-12-23T01:47:51+00:00",
+        "fingerprint_sha256": "c6cb084829675796f8635d2b90297c901eb9fb488e8e4a43de1a509ec4938933",
+        "spki_sha256": "bc16a3ab161fdbf3ecf5f7343cf29d3c287f09aac61b14daa65b3cd9997742f1"
+      },
+      "verify_excerpt": "vJJJGLo5fOtLdzHC\nGmayIoRzwB1n0GB4E9ixzhZA33CLHomgk5FX5qDEieqLSwL1puRZcUxFMKRVv5r1\nMK1Bs6qsj72Zg37QzliVSgh5l/9PipzplQ9HUFa7Ec0TgeTQuRFA74W3Z2uD68+w\ngDrGJplVAwIACPVlFbBO1ELUR0Bk5wyhrhtcZOqmvoq6D0uHVKYQlsETxrnNgKO1\nP3v5YHKrxjcCAwEAAaOBlzCBlDAMBgNVHRMBAf8EAjAAMB8GA1UdEQQYMBaCFHRs\ncy1sYWIuZXhhbXBsZS50ZXN0MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggr\nBgEFBQcDATAdBgNVHQ4EFgQUaGYaYbCZScYY1ES3U6ddAV1KKs4wHwYDVR0jBBgw\nFoAUN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBAGYVVfjP\nT4ZK/vulDDbhBrzKKyz9sTwyNvw6sS6E3xtfB+tswfUA2prHxpgbV0oI2N8MxFyN\nOn2f4a3+/Pfr49BdixrW0PNvL3Tn92B2G7EKEKo1ubWv9YxTvzvVS8dyhPN5R382\n7a1jsykq+17alPpN0rUKybeYSaeKoU1yoqu8JX/E1ixWmOkfRtKnV9FUZDE1DDfQ\nd1qFqgX6iLi3Y3LzJ4gSh72UbJblUJcKuivTeR6lReTaCX5kPyqPp42FT7wLsmVu\nYWfhj5snsLmAMXQoDQHP7E+M1JPT3NB2sbHnt0UDUhF7Zx7Fmz7N9QuBtuJ+S9N7\nOsSqt7AFKNxXVCo=\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\n---\nSSL handshake has read 960 bytes and written 227 bytes\nVerification error: certificate is not yet valid\n---\nNew, (NONE), Cipher is (NONE)\nProtocol: TLSv1.2\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.2\n    Cipher    : 0000\n    Session-ID: \n    Session-ID-ctx: \n    Master-Key: \n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=1 CN=TLS-LAB Trusted Root CA\nverify return:1\ndepth=0 CN=tls-lab.example.test\nverify error:num=9:certificate is not yet valid\nnotBefore=Nov 20 01:47:51 2026 GMT\n4017A309487F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "future",
+      "expected_certificate_status": "NOT_YET_VALID",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15613,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.3",
+      "negotiated_tls": "TLSv1.3",
+      "certificate_status": "NOT_YET_VALID",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-20T01:47:51+00:00",
+        "not_after": "2026-12-23T01:47:51+00:00",
+        "fingerprint_sha256": "c6cb084829675796f8635d2b90297c901eb9fb488e8e4a43de1a509ec4938933",
+        "spki_sha256": "bc16a3ab161fdbf3ecf5f7343cf29d3c287f09aac61b14daa65b3cd9997742f1"
+      },
+      "verify_excerpt": "DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKRvFBFQBMDO\nfI4sW6p3o6NUP8vFsl92WQNYZv1//XNDgCcRZ+OoVnCq3LKtMbLxLg6/e5SQeDZc\nlINJ2QlJ70g4Ko/om4qzyg0xxt5eUVtOemRIuYNGW1QoPojzvJJJGLo5fOtLdzHC\nGmayIoRzwB1n0GB4E9ixzhZA33CLHomgk5FX5qDEieqLSwL1puRZcUxFMKRVv5r1\nMK1Bs6qsj72Zg37QzliVSgh5l/9PipzplQ9HUFa7Ec0TgeTQuRFA74W3Z2uD68+w\ngDrGJplVAwIACPVlFbBO1ELUR0Bk5wyhrhtcZOqmvoq6D0uHVKYQlsETxrnNgKO1\nP3v5YHKrxjcCAwEAAaOBlzCBlDAMBgNVHRMBAf8EAjAAMB8GA1UdEQQYMBaCFHRs\ncy1sYWIuZXhhbXBsZS50ZXN0MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggr\nBgEFBQcDATAdBgNVHQ4EFgQUaGYaYbCZScYY1ES3U6ddAV1KKs4wHwYDVR0jBBgw\nFoAUN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBAGYVVfjP\nT4ZK/vulDDbhBrzKKyz9sTwyNvw6sS6E3xtfB+tswfUA2prHxpgbV0oI2N8MxFyN\nOn2f4a3+/Pfr49BdixrW0PNvL3Tn92B2G7EKEKo1ubWv9YxTvzvVS8dyhPN5R382\n7a1jsykq+17alPpN0rUKybeYSaeKoU1yoqu8JX/E1ixWmOkfRtKnV9FUZDE1DDfQ\nd1qFqgX6iLi3Y3LzJ4gSh72UbJblUJcKuivTeR6lReTaCX5kPyqPp42FT7wLsmVu\nYWfhj5snsLmAMXQoDQHP7E+M1JPT3NB2sbHnt0UDUhF7Zx7Fmz7N9QuBtuJ+S9N7\nOsSqt7AFKNxXVCo=\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\nNegotiated TLS1.3 group: X25519MLKEM768\n---\nSSL handshake has read 2159 bytes and written 1496 bytes\nVerification error: certificate is not yet valid\n---\nNew, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384\nProtocol: TLSv1.3\nThis TLS version forbids renegotiation.\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nEarly data was not sent\nVerify return code: 9 (certificate is not yet valid)\n---\n\nConnecting to 127.0.0.1\ndepth=1 CN=TLS-LAB Trusted Root CA\nverify return:1\ndepth=0 CN=tls-lab.example.test\nverify error:num=9:certificate is not yet valid\nnotBefore=Nov 20 01:47:51 2026 GMT\n40B77CBEB37F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "future",
+      "expected_certificate_status": "NOT_YET_VALID",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15711,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.1",
+      "negotiated_tls": "TLSv1.1",
+      "certificate_status": "INVALID_PURPOSE",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "DEPRECATED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "b0b853f20abb3ce75f892a8d01ed197195640b78981707cb9745b7353dd35f03",
+        "spki_sha256": "94ef320f9404f703e674aba842f226c020c84daf4a41d79b449f76003188f418"
+      },
+      "verify_excerpt": "KaxyWC/j0eLNYP7UTzkitb9XpOQ9S+WR\nZHx2a2qLwuN4UvyaOPvqSo6/D4ikM7UBnTj7XeLk8Hext6vfJerWdcdEEMK6fTi4\nuhRzhIz58d+QMMrnWjO3iOSY+POXX19NKSzCjUGtX6zEmhaVW6VkYKDevDOnbLBq\naYCikgrguHeGPCxdAOHlq2fxtYArRyCPOvHbNqWYxLRTcImdZJ4l1Noq0nGXURT+\nL2Vt22p/a+oau66uJfMK8mXW2qnl2lgZo4j+9jM5ZyX1HdHlvyDWXfSSgp9swDH0\n0vN82W8y95UCAwEAAaOBlzCBlDAMBgNVHRMBAf8EAjAAMB8GA1UdEQQYMBaCFHRs\ncy1sYWIuZXhhbXBsZS50ZXN0MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggr\nBgEFBQcDAjAdBgNVHQ4EFgQULwK1cGhFZYzbfuU/92Zmr+mXF8wwHwYDVR0jBBgw\nFoAUN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBAARBPIAy\nkGC36oBO+/2o2GukU5nEy7EbeFOplFHJeG9Q0FR40IB8S2RkAAzmDgXEipRv7ORq\nIYwVRjF4eLs+X4vn3StHeINo9VvtKFsdhwF6jc3IQUmV1AMLqpEQh+1nXfts96rw\ndPAnzz1UUn0sSRhSpr6PqMKFPefX3f3sufnkDCdIzjYQSZI4BACCyXTMYu+K4Juw\nnMJK50i8bfp5OIrUUnfWi4re39F06seoBge52vAizQwPjoicT4QboGZqGNI7n5G7\nuoKcZxOndHrAahcITjVOPHKaY/bFvYQfzGtCj3WqV3w+PCXWxd1MwiqmDNlVMbC8\nDA9j+1bne3r5VAc=\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\n---\nSSL handshake has read 964 bytes and written 143 bytes\nVerification error: unsuitable certificate purpose\n---\nNew, (NONE), Cipher is (NONE)\nProtocol: TLSv1.1\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.1\n    Cipher    : 0000\n    Session-ID: \n    Session-ID-ctx: \n    Master-Key: \n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=0 CN=tls-lab.example.test\nverify error:num=26:unsuitable certificate purpose\n4017862B347F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "wrong_eku",
+      "expected_certificate_status": "INVALID_PURPOSE",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15712,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.2",
+      "negotiated_tls": "TLSv1.2",
+      "certificate_status": "INVALID_PURPOSE",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "b0b853f20abb3ce75f892a8d01ed197195640b78981707cb9745b7353dd35f03",
+        "spki_sha256": "94ef320f9404f703e674aba842f226c020c84daf4a41d79b449f76003188f418"
+      },
+      "verify_excerpt": "KaxyWC/j0eLNYP7UTzkitb9XpOQ9S+WR\nZHx2a2qLwuN4UvyaOPvqSo6/D4ikM7UBnTj7XeLk8Hext6vfJerWdcdEEMK6fTi4\nuhRzhIz58d+QMMrnWjO3iOSY+POXX19NKSzCjUGtX6zEmhaVW6VkYKDevDOnbLBq\naYCikgrguHeGPCxdAOHlq2fxtYArRyCPOvHbNqWYxLRTcImdZJ4l1Noq0nGXURT+\nL2Vt22p/a+oau66uJfMK8mXW2qnl2lgZo4j+9jM5ZyX1HdHlvyDWXfSSgp9swDH0\n0vN82W8y95UCAwEAAaOBlzCBlDAMBgNVHRMBAf8EAjAAMB8GA1UdEQQYMBaCFHRs\ncy1sYWIuZXhhbXBsZS50ZXN0MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggr\nBgEFBQcDAjAdBgNVHQ4EFgQULwK1cGhFZYzbfuU/92Zmr+mXF8wwHwYDVR0jBBgw\nFoAUN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBAARBPIAy\nkGC36oBO+/2o2GukU5nEy7EbeFOplFHJeG9Q0FR40IB8S2RkAAzmDgXEipRv7ORq\nIYwVRjF4eLs+X4vn3StHeINo9VvtKFsdhwF6jc3IQUmV1AMLqpEQh+1nXfts96rw\ndPAnzz1UUn0sSRhSpr6PqMKFPefX3f3sufnkDCdIzjYQSZI4BACCyXTMYu+K4Juw\nnMJK50i8bfp5OIrUUnfWi4re39F06seoBge52vAizQwPjoicT4QboGZqGNI7n5G7\nuoKcZxOndHrAahcITjVOPHKaY/bFvYQfzGtCj3WqV3w+PCXWxd1MwiqmDNlVMbC8\nDA9j+1bne3r5VAc=\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\n---\nSSL handshake has read 960 bytes and written 227 bytes\nVerification error: unsuitable certificate purpose\n---\nNew, (NONE), Cipher is (NONE)\nProtocol: TLSv1.2\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.2\n    Cipher    : 0000\n    Session-ID: \n    Session-ID-ctx: \n    Master-Key: \n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=0 CN=tls-lab.example.test\nverify error:num=26:unsuitable certificate purpose\n4067E5A4057F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "wrong_eku",
+      "expected_certificate_status": "INVALID_PURPOSE",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15713,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.3",
+      "negotiated_tls": "TLSv1.3",
+      "certificate_status": "INVALID_PURPOSE",
+      "certificate_authenticated": false,
+      "spki_authorized": null,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "b0b853f20abb3ce75f892a8d01ed197195640b78981707cb9745b7353dd35f03",
+        "spki_sha256": "94ef320f9404f703e674aba842f226c020c84daf4a41d79b449f76003188f418"
+      },
+      "verify_excerpt": "0NzUxWhcNMjYxMTI1MDE0NzUxWjAfMR0wGwYDVQQDDBR0bHMtbGFiLmV4YW1w\nbGUudGVzdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJKgN1fJ9Q8W\nDZduhrTiwY0iZYU9581BJ2o6xsnCzdP2KaxyWC/j0eLNYP7UTzkitb9XpOQ9S+WR\nZHx2a2qLwuN4UvyaOPvqSo6/D4ikM7UBnTj7XeLk8Hext6vfJerWdcdEEMK6fTi4\nuhRzhIz58d+QMMrnWjO3iOSY+POXX19NKSzCjUGtX6zEmhaVW6VkYKDevDOnbLBq\naYCikgrguHeGPCxdAOHlq2fxtYArRyCPOvHbNqWYxLRTcImdZJ4l1Noq0nGXURT+\nL2Vt22p/a+oau66uJfMK8mXW2qnl2lgZo4j+9jM5ZyX1HdHlvyDWXfSSgp9swDH0\n0vN82W8y95UCAwEAAaOBlzCBlDAMBgNVHRMBAf8EAjAAMB8GA1UdEQQYMBaCFHRs\ncy1sYWIuZXhhbXBsZS50ZXN0MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggr\nBgEFBQcDAjAdBgNVHQ4EFgQULwK1cGhFZYzbfuU/92Zmr+mXF8wwHwYDVR0jBBgw\nFoAUN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBAARBPIAy\nkGC36oBO+/2o2GukU5nEy7EbeFOplFHJeG9Q0FR40IB8S2RkAAzmDgXEipRv7ORq\nIYwVRjF4eLs+X4vn3StHeINo9VvtKFsdhwF6jc3IQUmV1AMLqpEQh+1nXfts96rw\ndPAnzz1UUn0sSRhSpr6PqMKFPefX3f3sufnkDCdIzjYQSZI4BACCyXTMYu+K4Juw\nnMJK50i8bfp5OIrUUnfWi4re39F06seoBge52vAizQwPjoicT4QboGZqGNI7n5G7\nuoKcZxOndHrAahcITjVOPHKaY/bFvYQfzGtCj3WqV3w+PCXWxd1MwiqmDNlVMbC8\nDA9j+1bne3r5VAc=\n-----END CERTIFICATE-----\n---\nno peer certificate available\n---\nNo client certificate CA names sent\nNegotiated TLS1.3 group: X25519MLKEM768\n---\nSSL handshake has read 2159 bytes and written 1496 bytes\nVerification error: unsuitable certificate purpose\n---\nNew, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384\nProtocol: TLSv1.3\nThis TLS version forbids renegotiation.\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nEarly data was not sent\nVerify return code: 26 (unsuitable certificate purpose)\n---\n\nConnecting to 127.0.0.1\ndepth=0 CN=tls-lab.example.test\nverify error:num=26:unsuitable certificate purpose\n40D7E545107F0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:../ssl/statem/statem_clnt.c:2124:",
+      "scenario": "wrong_eku",
+      "expected_certificate_status": "INVALID_PURPOSE",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15811,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.1",
+      "negotiated_tls": "TLSv1.1",
+      "certificate_status": "KEY_NOT_APPROVED",
+      "certificate_authenticated": true,
+      "spki_authorized": false,
+      "protocol_policy": "DEPRECATED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "7507b83937d5f95a50cd6ff8168d599a1685a0f1c6bdf179b3b17db2861e5855",
+        "spki_sha256": "bd3244ff86bfd73f9a3fac8bd18b1442947e146e0269b9a744015b87d02cca5d"
+      },
+      "verify_excerpt": " 257 bytes\nVerification: OK\nVerified peername: tls-lab.example.test\n---\nNew, TLSv1.0, Cipher is ECDHE-RSA-AES256-SHA\nProtocol: TLSv1.1\nServer public key is 2048 bit\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.1\n    Cipher    : ECDHE-RSA-AES256-SHA\n    Session-ID: B78DD2AEE040D037879689D37C5C52399D315B16548E0F4C720DC4BB4D7AA7A3\n    Session-ID-ctx: \n    Master-Key: 4B5D41BE91907D0135A711A03045A85203CF1E81C7A77CA5199D07D7FAA1B5DE0095F73AE9967F2371FE4AED929EA17C\n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    TLS session ticket lifetime hint: 7200 (seconds)\n    TLS session ticket:\n    0000 - d6 92 44 22 43 18 18 21-e0 54 55 81 fc 92 36 c3   ..D\"C..!.TU...6.\n    0010 - 5c f3 b8 da e2 46 63 a7-05 98 21 71 0f 71 5e 5d   \\....Fc...!q.q^]\n    0020 - 1f 6d 50 20 96 2a 27 ae-45 8c c0 62 40 3a a5 72   .mP .*'.E..b@:.r\n    0030 - ad 29 7e b9 0e 8a c2 a4-7b bb 99 24 d5 41 1a 39   .)~.....{..$.A.9\n    0040 - 2f 7f 7b 8d 39 2f c1 f9-3f c9 9c f9 74 51 7a 6f   /.{.9/..?...tQzo\n    0050 - a9 2d e2 87 3e 30 08 c2-d0 7a 39 c2 95 f6 f6 d3   .-..>0...z9.....\n    0060 - 16 74 ff 07 14 7b 27 94-ac b3 06 2c e5 71 8c 5e   .t...{'....,.q.^\n    0070 - af e4 8f 6f 37 c5 3b 99-91 60 24 56 3b f4 44 c2   ...o7.;..`$V;.D.\n    0080 - 32 52 01 c1 a7 d9 67 ae-48 c9 dd fd 6a 50 05 75   2R....g.H...jP.u\n    0090 - 2b c1 72 02 85 43 a8 82-0f e1 20 ee 08 11 c9 c6   +.r..C.... .....\n    00a0 - 3a 55 9c fc c0 e6 9c 91-f5 61 57 1f 91 01 2a 60   :U.......aW...*`\n\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=1 CN=TLS-LAB Trusted Root CA\nverify return:1\ndepth=0 CN=tls-lab.example.test\nverify return:1\nDONE",
+      "scenario": "unapproved_leaf",
+      "expected_certificate_status": "KEY_NOT_APPROVED",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15812,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.2",
+      "negotiated_tls": "TLSv1.2",
+      "certificate_status": "KEY_NOT_APPROVED",
+      "certificate_authenticated": true,
+      "spki_authorized": false,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "7507b83937d5f95a50cd6ff8168d599a1685a0f1c6bdf179b3b17db2861e5855",
+        "spki_sha256": "bd3244ff86bfd73f9a3fac8bd18b1442947e146e0269b9a744015b87d02cca5d"
+      },
+      "verify_excerpt": "ification: OK\nVerified peername: tls-lab.example.test\n---\nNew, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384\nProtocol: TLSv1.2\nServer public key is 2048 bit\nSecure Renegotiation IS supported\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nSSL-Session:\n    Protocol  : TLSv1.2\n    Cipher    : ECDHE-RSA-AES256-GCM-SHA384\n    Session-ID: 0B9B9767839D168281BDE3591ECDD5E78DB0212506DAD367180C1AE23701B613\n    Session-ID-ctx: \n    Master-Key: FEE7592C98DF0DD23ABF42782EEFEF0260A635CCCE4FAA01C12B67CC82845DE4ECDDC90E301272E9A2C0CC36E02A80D6\n    PSK identity: None\n    PSK identity hint: None\n    SRP username: None\n    TLS session ticket lifetime hint: 7200 (seconds)\n    TLS session ticket:\n    0000 - 17 d2 52 88 d5 43 6d 36-57 24 f5 f0 ca 73 11 c9   ..R..Cm6W$...s..\n    0010 - 2a 6e 53 c3 ab c8 b8 87-ff cf 28 eb cb 6e 62 5d   *nS.......(..nb]\n    0020 - e0 4b f8 78 3e e9 71 3a-f8 7d b8 e4 94 cb 2a e0   .K.x>.q:.}....*.\n    0030 - 56 56 f3 a3 db 14 be af-c8 72 ae b7 cd 13 d6 e7   VV.......r......\n    0040 - cb 67 ff 5b 0e 5b fc 58-c5 28 28 04 6f 44 05 eb   .g.[.[.X.((.oD..\n    0050 - 93 66 32 6f 0c 77 d9 3a-d0 b6 93 12 3a 81 3f 90   .f2o.w.:....:.?.\n    0060 - 63 a9 46 06 60 0b 20 da-1a 88 17 3f 62 eb 47 65   c.F.`. ....?b.Ge\n    0070 - 0f 3e 08 aa 61 32 8e 5b-47 8d 7b 18 e3 1b 9d 56   .>..a2.[G.{....V\n    0080 - cd 8a 23 b0 65 94 93 2e-f7 2b f3 10 2b 2c 01 55   ..#.e....+..+,.U\n    0090 - 70 b1 2e d0 98 71 5a 23-7b ac df 7f f4 b1 c8 6c   p....qZ#{......l\n    00a0 - 34 38 90 9b e9 53 b3 4b-4f c6 1e dc ee fd b4 9e   48...S.KO.......\n\n    Start Time: 1794966473\n    Timeout   : 7200 (sec)\n    Verify return code: 0 (ok)\n    Extended master secret: yes\n---\n\nConnecting to 127.0.0.1\ndepth=1 CN=TLS-LAB Trusted Root CA\nverify return:1\ndepth=0 CN=tls-lab.example.test\nverify return:1\nDONE",
+      "scenario": "unapproved_leaf",
+      "expected_certificate_status": "KEY_NOT_APPROVED",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 15813,
+      "servername": "tls-lab.example.test",
+      "requested_tls": "TLSv1.3",
+      "negotiated_tls": "TLSv1.3",
+      "certificate_status": "KEY_NOT_APPROVED",
+      "certificate_authenticated": true,
+      "spki_authorized": false,
+      "protocol_policy": "ALLOWED",
+      "overall_accept": false,
+      "leaf": {
+        "subject": "CN=tls-lab.example.test",
+        "issuer": "CN=TLS-LAB Trusted Root CA",
+        "san_dns": [
+          "tls-lab.example.test"
+        ],
+        "not_before": "2026-11-17T01:47:51+00:00",
+        "not_after": "2026-11-25T01:47:51+00:00",
+        "fingerprint_sha256": "7507b83937d5f95a50cd6ff8168d599a1685a0f1c6bdf179b3b17db2861e5855",
+        "spki_sha256": "bd3244ff86bfd73f9a3fac8bd18b1442947e146e0269b9a744015b87d02cca5d"
+      },
+      "verify_excerpt": "YxMTI1MDE0NzUxWjAfMR0wGwYDVQQDDBR0bHMtbGFiLmV4YW1w\nbGUudGVzdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANE0ianby480\nQVI3UhukuzzgjtfyA5qNGiZ7r4Xm8FdW/eoZY6VQXBerPaHJFaKBshF+yV9HQC/6\nOicyZ4h355gMQKHIVz0qxAbj7XlvHjieMA/pP4P0TNoZD+9cnJS323c0vGAla20H\n3MlmazHEz34xsVz/+B56d03oL0TTY6WHRt7E3vXi3rkzH4/AlHgnT3QdxYhTXVzO\nWpJ0PwjZp5FGDcJMrG3xcTcSRvkOrAwC4prnnX1Rx5II3Y/bqDPkzUDV+8QxL631\nu0iUTweA12xi/B0dndRrfSsPDw010yE4T4t8sZEC7YzVMUxlmLPpGhseq5cc318x\n3C98IzK5/oMCAwEAAaOBlzCBlDAMBgNVHRMBAf8EAjAAMB8GA1UdEQQYMBaCFHRs\ncy1sYWIuZXhhbXBsZS50ZXN0MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggr\nBgEFBQcDATAdBgNVHQ4EFgQUh1YdCERYQoX6bN5aJIAMSIwHlHIwHwYDVR0jBBgw\nFoAUN93QlIsR7RTG8NLFrfme6CJxl7IwDQYJKoZIhvcNAQELBQADggEBACN1gYbq\n/dFmyShloYsQ+qg+/LZ8IAsrqxRjp+1jehG7pKHc239dCrVDLY25nqjouxYgILrS\nqC4/DhBPp3hzLK0mmAMrZ9B5K8ZWDAZxc+uXkTSWtK59+i6X2TV03F2v73TzTiUM\nettroWCYOVM2EtvIS1fq96SIdOoaS82evAF6uaQWGHNnQqKBbCxDAwE9ub6P61p6\nEyLi9wayLpX8CMr88grtfngn0xoEXh+d14OWgW2c8kX3NdBWWNHU/by09CmeMsVz\nL01etLrxfKlU3El9xIWUvoQOhM/8RV/tavhy+P7v0oUu3wdpbXCNKPy0eooYw2Zq\n1Xj90N/r2W+LXCQ=\n-----END CERTIFICATE-----\n---\nServer certificate\nsubject=CN=tls-lab.example.test\nissuer=CN=TLS-LAB Trusted Root CA\n---\nNo client certificate CA names sent\nPeer signing digest: SHA256\nPeer signature type: rsa_pss_rsae_sha256\nNegotiated TLS1.3 group: X25519MLKEM768\n---\nSSL handshake has read 2519 bytes and written 1569 bytes\nVerification: OK\nVerified peername: tls-lab.example.test\n---\nNew, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384\nProtocol: TLSv1.3\nServer public key is 2048 bit\nThis TLS version forbids renegotiation.\nCompression: NONE\nExpansion: NONE\nNo ALPN negotiated\nEarly data was not sent\nVerify return code: 0 (ok)\n---\n\nConnecting to 127.0.0.1\ndepth=1 CN=TLS-LAB Trusted Root CA\nverify return:1\ndepth=0 CN=tls-lab.example.test\nverify return:1\nDONE",
+      "scenario": "unapproved_leaf",
+      "expected_certificate_status": "KEY_NOT_APPROVED",
+      "reason_correct": true,
+      "protocol_correct": true,
+      "transport_correct": true,
+      "binary_correct": true
+    }
+  ]
+}
